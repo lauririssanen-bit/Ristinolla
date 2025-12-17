@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moderni ja tyylikäs Ristinolla-peli. Pelaa ystävää vastaan ja nauti neon-hohtoisesta tunnelmasta.">
+    <title>Neon Ristinolla</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>Ristinolla</h1>
+            <div class="status-bar" id="status">Vuoro: <span class="player-x">X</span></div>
+        </header>
+
+        <div class="game-board" id="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+
+        <div class="controls">
+            <button id="restartButton" class="btn reset-btn">Uusi Peli</button>
+        </div>
+        
+        <div class="scoreboard">
+            <div class="score-box x-score">
+                <span class="score-label">Pelaaja X</span>
+                <span class="score-value" id="scoreX">0</span>
+            </div>
+            <div class="score-box o-score">
+                <span class="score-label">Pelaaja O</span>
+                <span class="score-value" id="scoreO">0</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Winning Modal -->
+    <div class="modal" id="winningModal">
+        <div class="modal-content">
+            <h2 id="winningMessageText"></h2>
+            <button id="newGameButton" class="btn modal-btn">Pelaa Uudelleen</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
